@@ -2,9 +2,9 @@ import React from "react";
 
 interface XLogoProps extends React.SVGProps<SVGSVGElement> {}
 
-const XLogo = ({ className, fill }: XLogoProps) => {
+const XLogo = ({ className, fill, ...rest }: XLogoProps) => {
   return (
-    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true" {...rest}>
       <g>
         <path
           fill={fill}

@@ -2,7 +2,7 @@ import XLogo from "@/components/svgs/XLogo";
 import Link from "next/link";
 import { tv } from "tailwind-variants";
 
-export default function HomePage() {
+export default function LandingPage() {
   return (
     <div className={container()}>
       <div className={logo()}>
