@@ -1,4 +1,4 @@
-import LoginModal from "@/app/(beforeLogin)/_components/LoginModal";
+import LoginModal from "@/app/(beforeLogin)/_components/login-modal";
 import React from "react";
 
 const LoginPage = () => {

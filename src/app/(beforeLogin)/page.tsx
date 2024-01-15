@@ -1,4 +1,4 @@
-import XLogo from "@/components/svgs/XLogo";
+import XLogo from "@/components/svgs/x-logo";
 import Link from "next/link";
 import { tv } from "tailwind-variants";
 

@@ -1,7 +1,9 @@
-import SearchIcon from "@/components/svgs/SearchIcon";
-import XLogo from "@/components/svgs/XLogo";
+import SearchIcon from "@/components/svgs/search-icon";
+import XLogo from "@/components/svgs/x-logo";
 import Link from "next/link";
 import { tv } from "tailwind-variants";
+import NavigationMenu from "./_components/navigation/navigation-menu";
+import LogoutButton from "./_components/button/logout-button";
 
 const AfterLoginLayout = ({ children }: { children: React.ReactNode }) => {
   const layout = afterLoginLayoutVariants();
@@ -16,6 +18,15 @@ const AfterLoginLayout = ({ children }: { children: React.ReactNode }) => {
                 <XLogo fill="white" width={40} />
               </div>
             </Link>
+            <nav className="flex-1">
+              <ul>
+                <NavigationMenu />
+              </ul>
+              <Link className={layout.postButton()} href="/compose/tweet">
+                게시하기
+              </Link>
+            </nav>
+            <LogoutButton />
           </div>
         </section>
       </header>
@@ -24,7 +35,7 @@ const AfterLoginLayout = ({ children }: { children: React.ReactNode }) => {
           <main className={layout.main()}>{children}</main>
           <section className={layout.rightSection()}>
             <form className={layout.searchForm()} action="">
-              <SearchIcon className={layout.searchIcon()} />
+              <SearchIcon width={20} className={layout.searchIcon()} />
               <input
                 className={layout.searchInput()}
                 type="search"
@@ -45,7 +56,7 @@ const afterLoginLayoutVariants = tv({
     container: "flex items-stretch bg-black h-[200dvh]",
     leftSideHeader: "flex flex-col items-end grow shrink-0",
     leftHeaderSection: "w-[275px] h-[100dvh]",
-    leftSectionFixed: "fixed w-[inherit] h-[100dvh]",
+    leftSectionFixed: "flex flex-col fixed w-[inherit] h-[100dvh]",
     logo: "inline-block h-[56px] mt-[2px]",
     logoPill:
       "flex justify-center items-center w-[50px] h-[50px] rounded-full hover:bg-[#181919] transition p-2",
@@ -58,5 +69,7 @@ const afterLoginLayoutVariants = tv({
     searchIcon: "ml-[20px] fill-[#71767A]",
     searchInput:
       "outline-none bg-inherit border-none p-2 mr-[5px] text-base text-white ",
+    postButton:
+      "mx-4 flex justify-center items-center h-[52px] shadow w-[234px] border-none font-bold text-base rounded-full bg-[#0088D1] hover:bg-[#0088D1]/90 transition",
   },
 });
