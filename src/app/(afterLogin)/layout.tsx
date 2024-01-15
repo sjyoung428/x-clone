@@ -68,7 +68,7 @@ const afterLoginLayoutVariants = tv({
       "fixed h-[42px] w-[inherit] rounded-lg bg-[#202327] mt-[6px] mb-[12px] flex items-center",
     searchIcon: "ml-[20px] fill-[#71767A]",
     searchInput:
-      "outline-none bg-inherit border-none p-2 mr-[5px] text-base text-white ",
+      "outline-none bg-inherit border-none p-2 mr-[5px] text-base text-white w-full search-cancel:appearance-none",
     postButton:
       "mx-4 flex justify-center items-center h-[52px] shadow w-[234px] border-none font-bold text-base rounded-full bg-[#0088D1] hover:bg-[#0088D1]/90 transition",
   },
